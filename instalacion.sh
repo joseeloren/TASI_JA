@@ -45,13 +45,12 @@ case $opcion in
     m ) cat $repo_dir/db_final.sql | mysql -u r_ja2 r_ja2 --password='12345678';;
 esac
 
-
 # Instalamos Joomla
 mkdir $install_dir
 cd $install_dir
 case $opcion in
-    l ) wget $virtuemart_zip -O virtuemart.zip; unzip virtuemart.zip;cp $repo_dir/configuration.php ${install_dir}/configuration.php;rm -rf ${install_dir}/installation;;
-    m ) unzip $repo_dir/restaurante-ja.zip -d .;;
+    l ) wget $virtuemart_zip -O virtuemart.zip; unzip virtuemart.zip; cp $repo_dir/configuration.php ${install_dir}/configuration.php; rm -rf ${install_dir}/installation ;;
+    m ) unzip $repo_dir/restaurante-ja.zip -d . ;;
 esac
 chown -R apache:apache *
 service httpd start
