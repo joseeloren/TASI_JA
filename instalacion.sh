@@ -41,8 +41,8 @@ chkconfig mysqld on
 service mysqld start
 cat crear_bd.sql | mysql
 case $opcion in
-    l ) cat db.sql | mysql -u r_ja2 r_ja2 --password='12345678';;
-    m ) cat db_final.sql | mysql -u r_ja2 r_ja2 --password='12345678';;
+    l ) cat $repo_dir/db.sql | mysql -u r_ja2 r_ja2 --password='12345678';;
+    m ) cat $repo_dir/db_final.sql | mysql -u r_ja2 r_ja2 --password='12345678';;
 esac
 
 
