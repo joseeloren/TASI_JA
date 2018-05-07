@@ -6,14 +6,14 @@ rm -rf $install_dir
 
 opcion='l';
 while true; do
-    read -p "¿Quiere instalacion limpia (opcion l) o con la gestion de pedidos del restaurante montado (opcion m)?" lm
+    read -p "¿Quiere instalacion limpia (opcion l) o con la gestion de pedidos del restaurante montado (opcion m)? " lm
     case $lm in
-	[Ll]* ) opcion='l';;
-	[Mm]* ) opcion='m';;
+	[Ll]* ) opcion='l'; break;;
+	[Mm]* ) opcion='m'; break;;
 	* ) echo "Elija una opcion valida" ;;
     esac
 done
-read -p "Indique el directorio del repositorio de Git (por ejemplo /home/foo/TASI-JA" repo_dir
+read -p "Indique el directorio del repositorio de Git (por ejemplo /home/foo/TASI_JA) " repo_dir
     
 # Establecemos el cortafuegos
 service iptables restart
@@ -51,7 +51,7 @@ mkdir $install_dir
 cd $install_dir
 case $opcion in
     l ) wget $virtuemart_zip -O virtuemart.zip; unzip virtuemart.zip;cp ${pwd}/configuration.php ${install_dir}/configuration.php;rm -rf ${install_dir}/installation;;
-    m ) unzip $repo_dir/restaurante-ja.zip;;
+    m ) unzip $repo_dir/restaurante-ja.zip -d .;;
 esac
 chown -R apache:apache *
 service httpd start
