@@ -1,4 +1,13 @@
 #!/bin/bash
+
+# Establecemos el cortafuegos
+service iptables restart
+iptables -F
+iptables -A INPUT -p tcp -m multiport --dports 80,5901 -j ACCEPT
+iptables -A INPUT -j DROP
+iptables -A FORWARD -j DROP
+iptables -A OUTPUT -j ACCEPT
+
 pwd=$(pwd)
 install_dir='/var/www/html/restaurante-ja'
 virtuemart_zip='http://dev.virtuemart.net/attachments/download/1112/VirtueMart3.2.12_Joomla_3.8.3-Stable-Full_Package.zip'
@@ -29,4 +38,5 @@ cp ${pwd}/configuration.php ${install_dir}/configuration.php
 rm -rf ${install_dir}/installation
 chown -R apache:apache *
 service httpd start
+wget localhost/restaurante-ja > /dev/null
 firefox localhost/restaurante-ja &
