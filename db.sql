@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.1.73, for redhat-linux-gnu (x86_64)
 --
--- Host: localhost    Database: r_ja
+-- Host: localhost    Database: r_ja2
 -- ------------------------------------------------------
 -- Server version	5.1.73
 
@@ -4634,7 +4634,7 @@ CREATE TABLE `hy5pd_virtuemart_vendors_es_es` (
 
 LOCK TABLES `hy5pd_virtuemart_vendors_es_es` WRITE;
 /*!40000 ALTER TABLE `hy5pd_virtuemart_vendors_es_es` DISABLE KEYS */;
-INSERT INTO `hy5pd_virtuemart_vendors_es_es` VALUES (1,'<p>Welcome to VirtueMart the ecommerce managment system. The sample data give you a good insight of the possibilities with VirtueMart. The product description is directly the manual to configure the demonstrated features. \\n </p><p>You see here the store description used to describe your store. Check it out!</p> <p>We were established in 1869 in a time when getting good clothes was expensive, but the quality was good. Now that only a select few of those authentic clothes survive, we have dedicated this store to bringing the experience alive for collectors and master carrier everywhere.</p>','<h5>This is a demo store. Your orders will not proceed. You have not configured any terms of service yet. Click <a href=\"/restaurante-ja/administrator/index.php?option=com_virtuemart&view=user&task=editshop\">here</a> to change this text.</h5>','VAT-ID: XYZ-DEMO<br />Reg.Nr: DEMONUMBER','.vmdoc-header { }\n.vmdoc-footer { }\n','<h1>{vm:vendorname}</h1><p>{vm:vendoraddress}</p>','{vm:vendorlegalinfo}<br /> Page {vm:pagenum}/{vm:pagecount}','VirtueMart 3 Sample store','','http://localhost/restaurante-ja/','','','','','','','','','virtuemart-3-sample-store');
+INSERT INTO `hy5pd_virtuemart_vendors_es_es` VALUES (1,'<p>Welcome to VirtueMart the ecommerce managment system. The sample data give you a good insight of the possibilities with VirtueMart. The product description is directly the manual to configure the demonstrated features. \\n </p><p>You see here the store description used to describe your store. Check it out!</p> <p>We were established in 1869 in a time when getting good clothes was expensive, but the quality was good. Now that only a select few of those authentic clothes survive, we have dedicated this store to bringing the experience alive for collectors and master carrier everywhere.</p>','<h5>This is a demo store. Your orders will not proceed. You have not configured any terms of service yet. Click <a href=\"/restaurante-ja2/administrator/index.php?option=com_virtuemart&view=user&task=editshop\">here</a> to change this text.</h5>','VAT-ID: XYZ-DEMO<br />Reg.Nr: DEMONUMBER','.vmdoc-header { }\n.vmdoc-footer { }\n','<h1>{vm:vendorname}</h1><p>{vm:vendoraddress}</p>','{vm:vendorlegalinfo}<br /> Page {vm:pagenum}/{vm:pagecount}','VirtueMart 3 Sample store','','http://localhost/restaurante-ja2/','','','','','','','','','virtuemart-3-sample-store');
 /*!40000 ALTER TABLE `hy5pd_virtuemart_vendors_es_es` ENABLE KEYS */;
 UNLOCK TABLES;
 

@@ -13,9 +13,9 @@ class JConfig {
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
-	public $user = 'r_ja';
+	public $user = 'r_ja2';
 	public $password = '12345678';
-	public $db = 'r_ja';
+	public $db = 'r_ja2';
 	public $dbprefix = 'hy5pd_';
 	public $live_site = '';
 	public $secret = 'WmASsm6LHspjf3Us';
@@ -56,8 +56,8 @@ class JConfig {
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = '/var/www/html/restaurante-ja/administrator/logs';
-	public $tmp_path = '/var/www/html/restaurante-ja/tmp';
+	public $log_path = '/var/www/html/restaurante-ja2/administrator/logs';
+	public $tmp_path = '/var/www/html/restaurante-ja2/tmp';
 	public $lifetime = '60';
 	public $session_handler = 'database';
 	public $shared_session = '0';

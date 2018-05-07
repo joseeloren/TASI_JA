@@ -11,7 +11,7 @@ iptables -A FORWARD -j ACCEPT
 iptables -A OUTPUT -j ACCEPT
 
 pwd=$(pwd)
-install_dir='/var/www/html/restaurante-ja'
+install_dir='/var/www/html/restaurante-ja2'
 virtuemart_zip='http://dev.virtuemart.net/attachments/download/1112/VirtueMart3.2.12_Joomla_3.8.3-Stable-Full_Package.zip'
 rm -rf $install_dir
 # Incluimos los repositorios necesarios
@@ -29,7 +29,7 @@ chkconfig mysqld on
 # Creamos la base de datos
 service mysqld start
 cat crear_bd.sql | mysql
-cat db.sql | mysql -u r_ja r_ja --password='12345678'
+cat db.sql | mysql -u r_ja2 r_ja2 --password='12345678'
 
 # Instalamos Joomla
 mkdir $install_dir
@@ -40,5 +40,5 @@ cp ${pwd}/configuration.php ${install_dir}/configuration.php
 rm -rf ${install_dir}/installation
 chown -R apache:apache *
 service httpd start
-wget localhost/restaurante-ja > /dev/null
-firefox localhost/restaurante-ja &
+wget localhost/restaurante-ja2 > /dev/null
+firefox localhost/restaurante-ja2 &
